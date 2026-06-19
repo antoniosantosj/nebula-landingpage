@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nébula — Automação inteligente para equipes modernas</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Nébula é a plataforma de automação com IA que conecta suas ferramentas, acelera fluxos de trabalho e dá tempo de volta para o que realmente importa.">
+  <meta name="keywords" content="automação, inteligência artificial, SaaS, produtividade, fluxo de trabalho, integração, startups, empresas">
+  <meta name="author" content="Nébula">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nébula — Automação inteligente para equipes modernas">
+  <meta property="og:description" content="Conecte suas ferramentas, automatize processos e escale com inteligência artificial.">
+  <meta property="og:image" content="https://nebula.app/og-image.jpg">
+  <meta property="og:url" content="https://nebula.app">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nébula — Automação inteligente para equipes modernas">
+  <meta name="twitter:description" content="Conecte suas ferramentas, automatize processos e escale com inteligência artificial.">
+  <meta name="twitter:image" content="https://nebula.app/og-image.jpg">
+
+  <!-- Favicon Placeholder -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%233B82F6%22/></svg>">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================================ -->
+  <!-- SCROLL PROGRESS BAR -->
+  <!-- ================================ -->
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Progresso de leitura da página"></div>
+
+  <!-- ================================ -->
+  <!-- CURSOR GLOW -->
+  <!-- ================================ -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ================================ -->
+  <!-- NAVIGATION -->
+  <!-- ================================ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container" aria-label="Navegação principal">
+      <a href="#home" class="nav-logo" aria-label="Nébula — página inicial">
+        <span class="logo-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="12" stroke="url(#logoGradient)" stroke-width="2"/>
+            <circle cx="14" cy="14" r="4" fill="url(#logoGradient)"/>
+            <defs>
+              <linearGradient id="logoGradient" x1="0" y1="0" x2="28" y2="28">
+                <stop offset="0" stop-color="#3B82F6"/>
+                <stop offset="1" stop-color="#8B5CF6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">Nébula</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-nav>Home</a></li>
+        <li><a href="#features" class="nav-link" data-nav>Recursos</a></li>
+        <li><a href="#benefits" class="nav-link" data-nav>Benefícios</a></li>
+        <li><a href="#testimonials" class="nav-link" data-nav>Depoimentos</a></li>
+        <li><a href="#faq" class="nav-link" data-nav>FAQ</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm ripple">
+          <span>Começar agora</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" data-nav-mobile>Home</a></li>
+        <li><a href="#features" data-nav-mobile>Recursos</a></li>
+        <li><a href="#benefits" data-nav-mobile>Benefícios</a></li>
+        <li><a href="#testimonials" data-nav-mobile>Depoimentos</a></li>
+        <li><a href="#faq" data-nav-mobile>FAQ</a></li>
+        <li><a href="#contact" data-nav-mobile>Contato</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary btn-block ripple">Começar agora</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================================ -->
+    <!-- HERO SECTION -->
+    <!-- ================================ -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
+        <canvas id="particleCanvas" class="particle-canvas"></canvas>
+        <div class="grid-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content reveal-up">
+          <div class="hero-badge reveal-up" data-delay="0">
+            <span class="badge-dot"></span>
+            <span>Nova versão 3.0 disponível agora</span>
+          </div>
+
+          <h1 class="hero-title reveal-up" data-delay="1">
+            Automatize o futuro
+            <span class="text-gradient">com inteligência real</span>
+          </h1>
+
+          <p class="hero-subtitle reveal-up" data-delay="2">
+            A Nébula conecta suas ferramentas, automatiza fluxos de trabalho complexos
+            e devolve horas valiosas para sua equipe focar no que realmente importa.
+          </p>
+
+          <div class="hero-actions reveal-up" data-delay="3">
+            <a href="#contact" class="btn btn-primary btn-lg ripple">
+              <span>Testar gratuitamente</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <button class="btn btn-secondary btn-lg" id="watchDemoBtn">
+              <i class="fa-solid fa-play" aria-hidden="true"></i>
+              <span>Ver demonstração</span>
+            </button>
+          </div>
+
+          <div class="hero-stats reveal-up" data-delay="4">
+            <div class="stat-item">
+              <span class="stat-number" data-count="12500">0</span>
+              <span class="stat-suffix">+</span>
+              <span class="stat-label">Empresas ativas</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="98">0</span>
+              <span class="stat-suffix">%</span>
+              <span class="stat-label">Satisfação dos clientes</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="40">0</span>
+              <span class="stat-suffix">M+</span>
+              <span class="stat-label">Tarefas automatizadas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-scale" data-delay="2" id="heroVisual">
+          <div class="visual-card main-card">
+            <div class="card-header">
+              <div class="card-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="card-title">Painel de automação</span>
+            </div>
+            <div class="card-body">
+              <div class="flow-node node-active">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                <span>Gatilho recebido</span>
+              </div>
+              <div class="flow-line"></div>
+              <div class="flow-node">
+                <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                <span>Processando com IA</span>
+              </div>
+              <div class="flow-line"></div>
+              <div class="flow-node node-success">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Fluxo concluído</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-icon icon-1" aria-hidden="true">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div class="floating-icon icon-2" aria-hidden="true">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div class="floating-icon icon-3" aria-hidden="true">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div class="floating-badge" aria-hidden="true">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Segurança de nível bancário</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#trusted" class="scroll-indicator" aria-label="Rolar para baixo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ================================ -->
+    <!-- TRUSTED BY SECTION -->
+    <!-- ================================ -->
+    <section class="trusted" id="trusted">
+      <div class="container">
+        <p class="trusted-label reveal-up">Empresas que confiam na Nébula</p>
+      </div>
+      <div class="trusted-track-wrapper">
+        <div class="trusted-track" aria-hidden="false">
+          <div class="trusted-logo"><i class="fa-solid fa-cube"></i><span>Vortex</span></div>
+          <div class="trusted-logo"><i class="fa-solid fa-mountain"></i><span>Atlas</span></div>
+          <div class="trusted-logo"><i class="fa-solid fa-bolt"></i><span>Zentra</span></div>
+          <div class="trusted-logo"><i class="fa-solid fa-circle-nodes"></i><span>Orbital</span></div>
+          <div class="trusted-logo"><i class="fa-solid fa-leaf"></i><span>Verde</span></div>
+          <div class="trusted-logo"><i class="fa-solid fa-fingerprint"></i><span>Pulso</span></div>
+          <div class="trusted-logo"><i class="fa-solid fa-shapes"></i><span>Prisma</span></div>
+          <!-- duplicated for seamless infinite scroll -->
+          <div class="trusted-logo" aria-hidden="true"><i class="fa-solid fa-cube"></i><span>Vortex</span></div>
+          <div class="trusted-logo" aria-hidden="true"><i class="fa-solid fa-mountain"></i><span>Atlas</span></div>
+          <div class="trusted-logo" aria-hidden="true"><i class="fa-solid fa-bolt"></i><span>Zentra</span></div>
+          <div class="trusted-logo" aria-hidden="true"><i class="fa-solid fa-circle-nodes"></i><span>Orbital</span></div>
+          <div class="trusted-logo" aria-hidden="true"><i class="fa-solid fa-leaf"></i><span>Verde</span></div>
+          <div class="trusted-logo" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i><span>Pulso</span></div>
+          <div class="trusted-logo" aria-hidden="true"><i class="fa-solid fa-shapes"></i><span>Prisma</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- FEATURES SECTION -->
+    <!-- ================================ -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">Recursos</span>
+          <h2 class="section-title">Tudo que sua equipe precisa, em um só lugar</h2>
+          <p class="section-subtitle">Ferramentas poderosas desenhadas para simplificar processos complexos e acelerar resultados.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card tilt-card reveal-up" data-delay="0">
+            <div class="feature-icon">
+              <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+            </div>
+            <h3>Automação com IA</h3>
+            <p>Crie fluxos inteligentes que aprendem com seus dados e se adaptam automaticamente às mudanças.</p>
+          </article>
+
+          <article class="feature-card tilt-card reveal-up" data-delay="1">
+            <div class="feature-icon">
+              <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+            </div>
+            <h3>Integrações nativas</h3>
+            <p>Conecte mais de 200 ferramentas em poucos cliques, sem precisar escrever uma linha de código.</p>
+          </article>
+
+          <article class="feature-card tilt-card reveal-up" data-delay="2">
+            <div class="feature-icon">
+              <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+            </div>
+            <h3>Analytics em tempo real</h3>
+            <p>Acompanhe métricas e desempenho com painéis visuais atualizados a cada segundo.</p>
+          </article>
+
+          <article class="feature-card tilt-card reveal-up" data-delay="3">
+            <div class="feature-icon">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            </div>
+            <h3>Segurança avançada</h3>
+            <p>Criptografia de ponta a ponta e conformidade com os principais padrões internacionais.</p>
+          </article>
+
+          <article class="feature-card tilt-card reveal-up" data-delay="4">
+            <div class="feature-icon">
+              <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
+            </div>
+            <h3>Colaboração em equipe</h3>
+            <p>Trabalhe em conjunto com permissões granulares e comentários contextuais em tempo real.</p>
+          </article>
+
+          <article class="feature-card tilt-card reveal-up" data-delay="5">
+            <div class="feature-icon">
+              <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            </div>
+            <h3>Performance extrema</h3>
+            <p>Infraestrutura distribuída globalmente para garantir velocidade e disponibilidade constantes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- BENEFITS SECTION -->
+    <!-- ================================ -->
+    <section class="benefits" id="benefits">
+      <div class="container benefits-container">
+        <div class="benefits-visual reveal-left">
+          <div class="benefits-glow" aria-hidden="true"></div>
+          <div class="benefits-card">
+            <div class="mini-stat-card stat-card-1">
+              <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
+              <div>
+                <span class="mini-stat-number">+187%</span>
+                <span class="mini-stat-label">Produtividade</span>
+              </div>
+            </div>
+            <div class="benefits-illustration">
+              <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+            </div>
+            <div class="mini-stat-card stat-card-2">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              <div>
+                <span class="mini-stat-number">-65%</span>
+                <span class="mini-stat-label">Tempo gasto</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefits-content reveal-right">
+          <span class="section-eyebrow">Benefícios</span>
+          <h2 class="section-title">Menos trabalho manual, mais resultados reais</h2>
+          <p class="section-subtitle">A Nébula elimina tarefas repetitivas para que sua equipe possa focar em decisões estratégicas e crescimento.</p>
+
+          <ul class="benefits-list">
+            <li class="benefit-item">
+              <span class="check-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+              <div>
+                <h4>Redução de erros operacionais</h4>
+                <p>Processos automatizados eliminam falhas humanas recorrentes.</p>
+              </div>
+            </li>
+            <li class="benefit-item">
+              <span class="check-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+              <div>
+                <h4>Implementação em minutos</h4>
+                <p>Comece a automatizar sem precisar de equipe técnica dedicada.</p>
+              </div>
+            </li>
+            <li class="benefit-item">
+              <span class="check-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+              <div>
+                <h4>Escalabilidade sem limites</h4>
+                <p>Cresça de 10 a 10 mil automações sem perder performance.</p>
+              </div>
+            </li>
+            <li class="benefit-item">
+              <span class="check-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+              <div>
+                <h4>Suporte especializado 24/7</h4>
+                <p>Time dedicado pronto para ajudar em qualquer fuso horário.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary ripple">
+            <span>Conhecer todos os benefícios</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- HOW IT WORKS SECTION -->
+    <!-- ================================ -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">Como funciona</span>
+          <h2 class="section-title">Comece a automatizar em quatro passos</h2>
+          <p class="section-subtitle">Um processo simples e guiado, do cadastro à primeira automação ativa.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <div class="timeline-step reveal-up" data-delay="0">
+            <div class="step-number">01</div>
+            <div class="step-icon"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
+            <h3>Crie sua conta</h3>
+            <p>Cadastre-se gratuitamente em menos de dois minutos, sem cartão de crédito.</p>
+          </div>
+
+          <div class="timeline-step reveal-up" data-delay="1">
+            <div class="step-number">02</div>
+            <div class="step-icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></div>
+            <h3>Conecte suas ferramentas</h3>
+            <p>Integre seus aplicativos favoritos com poucos cliques e total segurança.</p>
+          </div>
+
+          <div class="timeline-step reveal-up" data-delay="2">
+            <div class="step-number">03</div>
+            <div class="step-icon"><i class="fa-solid fa-sliders" aria-hidden="true"></i></div>
+            <h3>Configure os fluxos</h3>
+            <p>Monte automações visuais com nosso editor intuitivo de arrastar e soltar.</p>
+          </div>
+
+          <div class="timeline-step reveal-up" data-delay="3">
+            <div class="step-number">04</div>
+            <div class="step-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></div>
+            <h3>Ative e acompanhe</h3>
+            <p>Lance suas automações e monitore resultados em tempo real pelo painel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- STATISTICS SECTION -->
+    <!-- ================================ -->
+    <section class="statistics" id="statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stats-card reveal-up" data-delay="0">
+            <i class="fa-solid fa-building" aria-hidden="true"></i>
+            <span class="stats-number" data-count="12500">0</span>
+            <span class="stats-suffix">+</span>
+            <p>Empresas atendidas</p>
+          </div>
+          <div class="stats-card reveal-up" data-delay="1">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            <span class="stats-number" data-count="40">0</span>
+            <span class="stats-suffix">M+</span>
+            <p>Automações executadas</p>
+          </div>
+          <div class="stats-card reveal-up" data-delay="2">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <span class="stats-number" data-count="120">0</span>
+            <span class="stats-suffix">+</span>
+            <p>Países alcançados</p>
+          </div>
+          <div class="stats-card reveal-up" data-delay="3">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <span class="stats-number" data-count="98">0</span>
+            <span class="stats-suffix">%</span>
+            <p>Satisfação geral</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- TESTIMONIALS SECTION -->
+    <!-- ================================ -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">Depoimentos</span>
+          <h2 class="section-title">O que nossos clientes estão dizendo</h2>
+          <p class="section-subtitle">Histórias reais de equipes que transformaram sua forma de trabalhar.</p>
+        </div>
+
+        <div class="testimonial-carousel reveal-up">
+          <div class="testimonial-track" id="testimonialTrack">
+
+            <div class="testimonial-card">
+              <div class="testimonial-rating" aria-label="Avaliação de 5 estrelas">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">"A Nébula reduziu nosso tempo de processos internos pela metade. A equipe toda se apaixonou pela ferramenta no primeiro mês."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">MC</div>
+                <div>
+                  <span class="author-name">Mariana Castro</span>
+                  <span class="author-role">COO na Vortex Tech</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-rating" aria-label="Avaliação de 5 estrelas">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Implementamos em um dia e já vimos resultado na primeira semana. O suporte é excepcional, sempre muito ágil."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">RP</div>
+                <div>
+                  <span class="author-name">Rafael Pontes</span>
+                  <span class="author-role">Head de Operações na Atlas</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-rating" aria-label="Avaliação de 5 estrelas">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">"A interface é linda e extremamente intuitiva. Conseguimos treinar todo o time em menos de um dia."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">JL</div>
+                <div>
+                  <span class="author-name">Julia Lemos</span>
+                  <span class="author-role">Gerente de Produto na Zentra</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-rating" aria-label="Avaliação de 5 estrelas">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Migrar para a Nébula foi a melhor decisão que tomamos esse ano. Escalamos sem dor de cabeça nenhuma."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">TB</div>
+                <div>
+                  <span class="author-name">Thiago Barbosa</span>
+                  <span class="author-role">CTO na Orbital Labs</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="prevTestimonial" aria-label="Depoimento anterior">
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Selecionar depoimento"></div>
+            <button class="carousel-btn" id="nextTestimonial" aria-label="Próximo depoimento">
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- PRICING SECTION -->
+    <!-- ================================ -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">Planos</span>
+          <h2 class="section-title">Escolha o plano ideal para sua equipe</h2>
+          <p class="section-subtitle">Comece grátis e evolua conforme sua operação cresce. Sem taxas escondidas.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card reveal-up" data-delay="0">
+            <div class="pricing-header">
+              <h3>Starter</h3>
+              <p>Ideal para times pequenos começando agora</p>
+            </div>
+            <div class="pricing-price">
+              <span class="price-currency">R$</span>
+              <span class="price-amount">0</span>
+              <span class="price-period">/mês</span>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Até 3 automações ativas</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> 1.000 execuções/mês</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> 5 integrações</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Suporte por e-mail</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary btn-block ripple">Começar grátis</a>
+          </div>
+
+          <div class="pricing-card pricing-featured reveal-up" data-delay="1">
+            <span class="popular-badge">Mais popular</span>
+            <div class="pricing-header">
+              <h3>Professional</h3>
+              <p>Para equipes em crescimento que precisam escalar</p>
+            </div>
+            <div class="pricing-price">
+              <span class="price-currency">R$</span>
+              <span class="price-amount">149</span>
+              <span class="price-period">/mês</span>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Automações ilimitadas</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> 50.000 execuções/mês</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Integrações ilimitadas</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Suporte prioritário 24/7</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Analytics avançado</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block ripple">Assinar agora</a>
+          </div>
+
+          <div class="pricing-card reveal-up" data-delay="2">
+            <div class="pricing-header">
+              <h3>Enterprise</h3>
+              <p>Para operações complexas e times grandes</p>
+            </div>
+            <div class="pricing-price">
+              <span class="price-amount price-custom">Sob consulta</span>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Tudo do plano Professional</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Execuções customizadas</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Gerente de conta dedicado</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> SLA garantido</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Onboarding personalizado</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary btn-block ripple">Falar com vendas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- FAQ SECTION -->
+    <!-- ================================ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">Perguntas frequentes</span>
+          <h2 class="section-title">Ainda tem dúvidas?</h2>
+          <p class="section-subtitle">Reunimos as perguntas mais comuns para ajudar você a decidir com confiança.</p>
+        </div>
+
+        <div class="faq-list reveal-up">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Preciso saber programar para usar a Nébula?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Não. A Nébula foi criada para ser usada por qualquer pessoa, com um editor visual de arrastar e soltar. Nenhum conhecimento técnico é necessário.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Posso cancelar minha assinatura a qualquer momento?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sim. Não há fidelidade ou multas. Você pode fazer upgrade, downgrade ou cancelar seu plano quando quiser, direto pelo painel.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>A Nébula é segura para dados sensíveis?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sim. Utilizamos criptografia de ponta a ponta, autenticação multifator e seguimos os principais padrões internacionais de segurança e privacidade.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quais ferramentas posso integrar?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Oferecemos mais de 200 integrações nativas, incluindo as principais plataformas de CRM, e-mail, planilhas, comunicação e armazenamento em nuvem.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Existe um período de teste gratuito?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sim, o plano Starter é gratuito para sempre, e os planos pagos incluem 14 dias de teste sem necessidade de cartão de crédito.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- FINAL CTA SECTION -->
+    <!-- ================================ -->
+    <section class="final-cta" id="contact">
+      <div class="final-cta-bg" aria-hidden="true">
+        <div class="gradient-blob blob-cta-1"></div>
+        <div class="gradient-blob blob-cta-2"></div>
+      </div>
+      <div class="container">
+        <div class="final-cta-content reveal-up">
+          <h2>Pronto para transformar sua forma de trabalhar?</h2>
+          <p>Junte-se a mais de 12.500 empresas que já automatizam seus processos com a Nébula.</p>
+          <div class="final-cta-actions">
+            <a href="#" class="btn btn-primary btn-lg ripple">
+              <span>Começar gratuitamente</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="btn btn-ghost btn-lg">
+              <span>Falar com um especialista</span>
+            </a>
+          </div>
+          <p class="final-cta-note">Sem cartão de crédito necessário · Cancele quando quiser</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================ -->
+  <!-- FOOTER -->
+  <!-- ================================ -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <span class="logo-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="14" r="12" stroke="url(#logoGradientFooter)" stroke-width="2"/>
+              <circle cx="14" cy="14" r="4" fill="url(#logoGradientFooter)"/>
+              <defs>
+                <linearGradient id="logoGradientFooter" x1="0" y1="0" x2="28" y2="28">
+                  <stop offset="0" stop-color="#3B82F6"/>
+                  <stop offset="1" stop-color="#8B5CF6"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="logo-text">Nébula</span>
+        </a>
+        <p>Automação inteligente para equipes que querem ir mais longe.</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon" aria-label="Nébula no LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="#" class="social-icon" aria-label="Nébula no Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" class="social-icon" aria-label="Nébula no X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="#" class="social-icon" aria-label="Nébula no YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Produto</h4>
+        <ul>
+          <li><a href="#features">Recursos</a></li>
+          <li><a href="#pricing">Planos</a></li>
+          <li><a href="#">Integrações</a></li>
+          <li><a href="#">Novidades</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Imprensa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#faq">Central de ajuda</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a href="#">Status do sistema</a></li>
+          <li><a href="#">Comunidade</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Segurança</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Nébula Tecnologia Ltda. Todos os direitos reservados.</p>
+        <p>Feito com <i class="fa-solid fa-heart" aria-hidden="true"></i> no Brasil por Antonio Santos</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================ -->
+  <!-- BACK TO TOP BUTTON -->
+  <!-- ================================ -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- ================================ -->
+  <!-- LOADER -->
+  <!-- ================================ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-orbit">
+      <span class="loader-dot"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
